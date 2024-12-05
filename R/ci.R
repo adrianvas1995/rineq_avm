@@ -66,9 +66,8 @@ function(x, y, wt = NULL, type = c("CI", "CIg", "CIc")) {
       } else if (type == "CIg"){
                 concentration_index <- concentration_index *  ybar
       } else if (type == "CIc"){
-                # concentration_index <- 4 * concentration_index *  ybar / 
-                                     # (max(y, na.rm = TRUE) - min(y, na.rm = TRUE))
-	        concentration_index <- 4 * concentration_index *  ybar
+                 concentration_index <- 4 * concentration_index *  ybar / 
+                                      (max(y, na.rm = TRUE) - min(y, na.rm = TRUE))
 
       }
 
